@@ -2,13 +2,44 @@
 @import parts/header
 @import parts/slider
 @import parts/catalog
+@import parts/seo
+@import parts/advantage
 
 // CUSTOM SASS
 .container
   padding-left: 15px
   padding-right: 15px
   margin: auto
-  // width: 1170px
+  width: 1170px
+  padding: 0 15px
+  // max-width: 1024px
+  margin: 0 auto
+
+
+.title
+    position: relative
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 25px
+    margin-top: 16px
+    line-height: 33px
+    &:before, &:after
+        position: absolute
+        bottom: -.5rem
+        left: 0
+        content: ''
+        display: block
+        height: 1px
+        width: 30%
+        background-color: $accent
+        z-index: 1
+    &:after
+        width: 50%
+        background-color: #e6e6e6
+        z-index: auto
+
+    
+
       
 
 @include media-breakpoint-down(lg)
