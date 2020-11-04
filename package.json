@@ -9,6 +9,7 @@
 	"author": "Alan Seerage",
 	"license": "ISC",
 	"devDependencies": {
+		"@fortawesome/fontawesome-free": "^5.15.1",
 		"bootstrap": "^4.5.2",
 		"browser-sync": "^2.26.12",
 		"del": "^6.0.0",
@@ -24,9 +25,7 @@
 		"gulp-stylus": "^2.7.0",
 		"gulp-uglify-es": "^2.0.0",
 		"jquery": "^3.5.1",
-		"remodal": "^1.1.1"
-	},
-	"dependencies": {
+		"remodal": "^1.1.1",
 		"tiny-slider": "^2.9.3"
 	}
 }

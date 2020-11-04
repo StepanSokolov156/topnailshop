@@ -23,7 +23,7 @@
                     color: #565656                        
                     span.js-wishlist-total, .js-compare-total, .js-cart-total, .price
                         font-weight: bold
-                    .fas, .far
+                    svg
                         color: $accent
                         margin: 0 7px
                         font-size: 14px
@@ -95,10 +95,9 @@
                         top: 50%
                         transform: translate(0, -50%)
                         left: 0.6rem
-                        .fa-search
+                        svg
+                            color: $accent
                             font-size: 16px
-                            &:before
-                                color: $accent
 
     &__bottom
         background-color: $accent
@@ -106,6 +105,11 @@
             display: flex
             justify-content: space-between
             align-items: center
+            &__menu-btn
+                display: flex
+                align-items: center
+                svg
+                    color: #ffffff
             &__btn
                 height: 3rem
                 background-color: transparent
@@ -119,10 +123,7 @@
                 text-transform: uppercase
                 font-size: 1rem
                 font-weight: 700
-                &:before
-                    font-family: "Font Awesome 5 Free"
-                    content: '\f0c9'
-                    margin-right: 5px
+                margin-left: 5px
             .search
                 display: flex
                 flex-wrap: wrap
@@ -146,9 +147,9 @@
                             top: 50%
                             transform: translate(0, -50%)
                             left: 0.6rem
-                            .fa-search
-                                &:before
-                                    color: $accent
+                            svg
+                                color: $accent
+                                font-size: 16px
     
 @media screen and ( max-width: 576px )
     .hide-xs

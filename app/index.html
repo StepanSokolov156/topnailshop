@@ -10,8 +10,6 @@
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dest/preview.jpg">
 	<link rel="stylesheet" href="css/app.min.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<script src="https://kit.fontawesome.com/f63215a2c3.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -89,7 +87,10 @@
 		<div class="header__bottom">
 			<div class="container">
 				<div class="navbar">
-					<button class="navbar__btn">Меню</button>
+					<div class="navbar__menu-btn">
+						<i class="fas fa-bars"></i>
+						<button class="navbar__btn">Меню</button>
+					</div>
 					<div class="search hide-md js-search">
 						<div class="search__form">
 							<div id="searchmob" class="input-group">  
@@ -151,20 +152,6 @@
 
 
 	<script src="js/app.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-	<script>
-		 var slider = tns({
-			container: '.my-slider',
-			items: 1,
-			slideBy: 'page',
-			autoplay: true,
-			autoplayTimeout: 8000,
-			speed: 1000,
-			controls: false,
-			nav: false,
-			mouseDrag: true
-		});
-	</script>
 
 
 </body>

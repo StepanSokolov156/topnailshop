@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// Custom JS
+	var slider = document.querySelector('.my-slider');
+
+	slider = tns({
+		container: '.my-slider',
+		items: 1,
+		slideBy: 'page',
+		autoplay: true,
+		autoplayTimeout: 8000,
+		speed: 1000,
+		controls: false,
+		nav: false,
+		mouseDrag: true
+	});
 
 });
