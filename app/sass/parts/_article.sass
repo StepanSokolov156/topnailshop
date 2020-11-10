@@ -1,0 +1,79 @@
+.article
+    padding: 30px 0
+    &__title
+        font-size: 24px
+        position: relative
+        text-align: center
+        margin-bottom: 20px
+        &:after
+            position: absolute
+            left: 50%
+            transform: translate(-50%, 0)
+            bottom: 0
+            content: ''
+            display: block
+            height: 1px
+            width: 20%
+            background-color: $accent
+    
+    &__wrap
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        .article__card
+            flex: 1 0 30%
+            min-width: 315px
+            max-width: 350px
+            padding: 15px
+            margin-bottom: 30px
+            .article__img
+                position: relative
+                img
+                    display: block
+                    max-width: 100%
+                    margin: 0 auto
+                .article__btn
+                    display: none
+                    padding: 5px 18px
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    background: $accent 
+                    color: #fffefe
+                    font-size: 13px
+                    border: none
+                    border-radius: 15px
+                    text-align: center
+
+            .article__body
+                padding: 0 15px
+                .article__card__title
+                    margin: 20px 0 10px 0
+                    font-size: 20px
+                    font-weight: 700
+                    line-height: 24px
+                    a
+                        color: #252525
+                        text-decoration: none
+
+@media screen and ( min-width: 960px )
+    .article
+        &__wrap
+            .article__card
+                transition: background .2s linear
+                &:hover
+                    background: #f7f7f7
+                    img
+                        filter: blur(3px)
+            
+            .article__img
+                transition: all 1.8s
+                img
+                    transition: all .8s
+                &:hover
+                    .article__btn
+                        display: block
+                        box-shadow: 0 2px 8px 0 rgba(0,0,0,.3), inset 0 0px 0 0 #dadce0
+                .article__btn
+                    transition: all .8s
