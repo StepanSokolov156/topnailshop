@@ -56,6 +56,22 @@
                     a
                         color: #252525
                         text-decoration: none
+    &__btn__more
+        color: #fffefe
+        text-decoration: none
+        display: block
+        padding: 2px 17px
+        margin: 0 auto
+        width: fit-content
+        height: fit-content
+        background: $accent
+        font-size: 12px
+        border: none
+        border-radius: 13px
+        &:hover
+            color: #fffefe
+            text-decoration: none
+        
 
 @media screen and ( min-width: 960px )
     .article
@@ -77,3 +93,8 @@
                         box-shadow: 0 2px 8px 0 rgba(0,0,0,.3), inset 0 0px 0 0 #dadce0
                 .article__btn
                     transition: all .8s
+        &__btn__more
+            transition: all .8s
+            &:hover
+                border-radius: 5px
+                box-shadow: 0 2px 8px 0 rgba(0,0,0,.3), inset 0 0px 0 0 #dadce0
