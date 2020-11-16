@@ -21,27 +21,18 @@
         justify-content: center
         flex-wrap: wrap
         .product__item
-            height: 440px
+            height: 536px
             min-width: 315px
             max-width: 350px
             flex: 1 0 25%
             border-bottom: 1px solid #efefef
             padding: 0
             overflow: hidden
-            transition: all 0.5s
-            &:hover
-                overflow: visible
-                z-index: 2
             .product__item__hover
                 padding: 15px 20px 0 20px
                 border: 1px solid #efefef
                 transition: all 0.2s
                 background-color: #fff
-                transition: all 0.5s
-                &:hover
-                    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.08)
-                    border-radius: 0.3rem
-                    border-color: #eaeaea
                 .product__rating
                     display: inline-flex
                     vertical-align: middle
@@ -80,7 +71,7 @@
                     display: flex
                     justify-content: space-between
                     align-items: flex-end
-                    margin-bottom: 5px
+                    margin-bottom: 20px
                     .product__price__block
                         .old__price
                             text-decoration: line-through
@@ -95,15 +86,15 @@
                     .addCart__btn
                         height: 35px
                         width: 130px
-                        border: 1px solid #FFFFFF
+                        border: 1px solid #95c31a
                         border-radius: 5px
                         font-size: 14px
                         color: #95c31a
                         background-color: #fff
                         &:hover
                             transition: all .5s
-                            border: 1px solid #95c31a
-                            border-radius: 5px
+                            color: #FFF
+                            background-color: #95c31a
                         span
                             margin-left: 5px
                 .product__footer
@@ -138,3 +129,19 @@
                                 color: #7b7b7b
                                 font-size: 11px
                                 text-decoration: underline
+
+@media screen and ( min-width: 960px )
+    .popular
+        .products__wrapper
+            .product__item
+                height: 440px
+                transition: all 0.5s
+                &:hover
+                    overflow: visible
+                    z-index: 2
+                .product__item__hover
+                    transition: all 0.5s
+                    &:hover
+                        box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.20)
+                        border-radius: 0.3rem
+                        border-color: #eaeaea
