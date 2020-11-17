@@ -58,6 +58,7 @@ const imagemin     = require('gulp-imagemin');
 const newer        = require('gulp-newer');
 const rsync        = require('gulp-rsync');
 const del          = require('del');
+const fileinclude  = require('gulp-file-include');
 
 function browsersync() {
 	browserSync.init({
@@ -97,6 +98,15 @@ function cleanimg() {
 	return del('' + paths.images.dest + '/**/*', { force: true })
 }
 
+function gulpInclude() {
+	return src(['app/html-dev/*.html'])
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe(dest('app'));
+}
+
 function deploy() {
 	return src(baseDir + '/')
 	.pipe(rsync({
@@ -114,7 +124,8 @@ function deploy() {
 
 function startwatch() {
 	watch(baseDir  + '/' + preprocessor + '/**/*', {usePolling: true}, styles);
-	watch(baseDir  + '/images/src/**/*.{' + imageswatch + '}', {usePolling: true}, images);
+	watch(baseDir  + '/images/src/**/*.{' + imageswatch + '}', {usePolling: true}, images); 
+	watch(baseDir  + '/html-dev/**/*.html', {usePolling: true}, gulpInclude);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}', {usePolling: true}).on('change', browserSync.reload);
 	watch([baseDir + '/js/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], {usePolling: true}, scripts);
 }
@@ -126,4 +137,5 @@ exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
 exports.deploy      = deploy;
-exports.default     = parallel(images, styles, scripts, browsersync, startwatch);
+exports.fileinclude = gulpInclude;
+exports.default     = parallel(images, styles, scripts, browsersync, gulpInclude, startwatch);
