@@ -50,34 +50,40 @@
             <!-- CATEGORY DESCRIPTION END -->
 
             <!-- SORT BEGIN -->
-            <div class="sort">
-                <select id="input-sort" class="form-control" onchange="location = this.value;">
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.sort_order&amp;order=ASC" selected="selected">По умолчанию</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=ASC">Дешевые</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=DESC">Дорогие</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=rating&amp;order=DESC">Популярные</option>
-                </select>
-            </div>
+            <div class="sort__wrap">
 
-            <div class="limit">
-                <select id="input-limit" class="form-control" onchange="location = this.value;">
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=15" selected="selected">15</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=25">25</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=50">50</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=75">75</option>
-                    <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=100">100</option>
-                </select>
+                <div class="sort">
+                    <i class="fas fa-sort-amount-down-alt"></i>
+                    <select id="input-sort" class="form-control" onchange="location = this.value;">
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.sort_order&amp;order=ASC" selected="selected">По умолчанию</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=ASC">Дешевые</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=DESC">Дорогие</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=rating&amp;order=DESC">Популярные</option>
+                    </select>
+                </div>
+    
+                <div class="limit">
+                    <div class="limit__title">На странице</div>
+                    <select id="input-limit" class="form-control" onchange="location = this.value;">
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=15" selected="selected">15</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=25">25</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=50">50</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=75">75</option>
+                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=100">100</option>
+                    </select>
+                </div>
+    
+                <!-- <div class="card__view">
+                    <button type="button" id="list-view" class="btn btn-default active" data-toggle="tooltip" title="" data-original-title="List" aria-describedby="tooltip234056">
+                        <i class="fa fa-th-list"></i>
+                    </button>
+    
+                    <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Grid">
+                        <i class="fa fa-th"></i>
+                    </button>
+                </div> -->
             </div>
-
-            <div class="card__view">
-                <button type="button" id="list-view" class="btn btn-default active" data-toggle="tooltip" title="" data-original-title="List" aria-describedby="tooltip234056">
-                    <i class="fa fa-th-list"></i>
-                </button>
-
-                <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Grid">
-                    <i class="fa fa-th"></i>
-                </button>
-            </div>
+            
             <!-- SORT END -->
 
             <!-- PRODUCT COLUMN BEGIN -->
