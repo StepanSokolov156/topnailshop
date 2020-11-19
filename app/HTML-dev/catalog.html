@@ -16,378 +16,537 @@
 
 <body>
 
-@@include('./include-parts/header.html')
+    @@include('./include-parts/header.html')
+
+    <div class="container-wide">
+
+        <div class="grid__wrap">        
+
+            <main class="main__content" id="main__content">
     
-    <div class="main__content">
-        <div class="container-wide">
-            <!-- BREADCRUMBS BEGIN -->
-            <ul class="breadcrumb">
-                <li>
-                    <a href="https://demo.opencart.com/index.php?route=common/home">
-                        <i class="fa fa-home"></i>
-                    </a>
-                    <span>
-                        <i class="fas fa-chevron-right"></i>
-                    </span>
-                </li>
-                <li>
-                    <a href="https://demo.opencart.com/index.php?route=product/category&amp;path=20">Наборы для гель-лака</a>
-                </li>
-            </ul>
-            <!-- BREADCRUMBS END -->
-
-            <h1 class="title">Наборы для гель-лака</h1>
-
-            <!-- CATEGORY DESCRIPTION BEGIN -->
-            <div class="wrapper">
-                <label for="button">Показать описание</label>
-                <input type="checkbox" id="button">
-                    <div class="description">
-                        Мы предлагаем наборы для маникюра гель-лаком на любой вкус и по доступным ценам. При этом, в наших наборах для гель-лака мы постарались охватить максимально возможное количество сочетаний, что бы у вас был широкий выбор доступных вариантов.
-                        В каждом наборе вы найдете современные высокотехнологичные и эффективные лампы для маникюра, которые сушат ногти за считанные секунды и не теряют мощность со временем. В зависимости от комплектации набора в него могут входить разное количество гель-лаков, дизайны для ногтей (стразы, бульонки, камифубуки), вспомогательные материалы для удобства нанесения покрытия. При этом каждый набор, вне зависимости от его цены и комплектации, позволит сразу после покупки сделать красивый и качественный маникюр гель-лаком.
-                    </div>
-            </div>
-            <!-- CATEGORY DESCRIPTION END -->
-
-            <!-- SORT BEGIN -->
-            <div class="sort__wrap">
-
-                <div class="sort">
-                    <i class="fas fa-sort-amount-down-alt"></i>
-                    <select id="input-sort" class="form-control" onchange="location = this.value;">
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.sort_order&amp;order=ASC" selected="selected">По умолчанию</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=ASC">Дешевые</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=DESC">Дорогие</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=rating&amp;order=DESC">Популярные</option>
-                    </select>
-                </div>
-    
-                <div class="limit">
-                    <div class="limit__title">На странице</div>
-                    <select id="input-limit" class="form-control" onchange="location = this.value;">
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=15" selected="selected">15</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=25">25</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=50">50</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=75">75</option>
-                        <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=100">100</option>
-                    </select>
-                </div>
-    
-                <!-- <div class="card__view">
-                    <button type="button" id="list-view" class="btn btn-default active" data-toggle="tooltip" title="" data-original-title="List" aria-describedby="tooltip234056">
-                        <i class="fa fa-th-list"></i>
-                    </button>
-    
-                    <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Grid">
-                        <i class="fa fa-th"></i>
-                    </button>
-                </div> -->
-            </div>
-            
-            <!-- SORT END -->
-
-            <!-- PRODUCT COLUMN BEGIN -->
-            <div class="popular">
-                <div class="products__wrapper">
-                        
-                    <div class="product__item">
-                        <div class="product__item__hover">
-                            <div class="product__rating">
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="product__img">
-                                <a href="#">
-                                    <img src="images/dest/Product1.jpg" alt="Product1">
-                                </a>
-                            </div>
-                            <div class="product__stock">
-                                <i class="fas fa-check"></i>
-                                в наличии
-                            </div>
-                            <div class="product__title">
-                                <a href="#">
-                                    Набор для шеллака "Мощный макси"
-                                </a>
-                            </div>
-                            <div class="product__btn__wrap">
-                                <div class="product__price__block">
-                                    <!-- <div class="old__price">1137 ₽</div> -->
-                                    <div class="product__price">1980 ₽</div>
-                                </div>
-                                <button class="addCart__btn" type="button" onclick="cart.add('43');">
-                                    <i class="fas fa-shopping-basket"></i> 
-                                    <span>В корзину</span>
-                                </button>
-                            </div>
-                            <div class="product__footer">
-
-                                <button class="fast__btn" type="button" onclick="oc_popup(2268);">
-                                    <span>Быстрый заказ</span>
-                                </button>
-
-                                <div class="wishlistCompare__btn__wrap">
-                                    <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
-                                        <i class="far fa-heart"></i>
-                                        <span>В закладки</span>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
-                                        <i class="far fa-chart-bar"></i>
-                                        <span>В сравнение</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                                    
-                    <div class="product__item">
-                        <div class="product__item__hover">
-                            <div class="product__rating">
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="product__img">
-                                <a href="#">
-                                    <img src="images/dest/Product2.jpg" alt="Product2">
-                                </a>
-                            </div>
-                            <div class="product__stock">
-                                <i class="fas fa-check"></i>
-                                в наличии
-                            </div>
-                            <div class="product__title">
-                                <a href="#">
-                                    Набор для шеллака "Мощный оптима" с лампой Sun X5 Plus, UV/LED, 80W
-                                </a>
-                            </div>
-                            <div class="product__btn__wrap">
-                                <div class="product__price__block">
-                                    <div class="old__price">1137 ₽</div>
-                                    <div class="product__price">980 ₽</div>
-                                </div>
-                                <button class="addCart__btn" type="button" onclick="cart.add('43');">
-                                    <i class="fas fa-shopping-basket"></i> 
-                                    <span>В корзину</span>
-                                </button>
-                            </div>
-                            <div class="product__footer">
-
-                                <button class="fast__btn" type="button" onclick="oc_popup(2268);">
-                                    <span>Быстрый заказ</span>
-                                </button>
-
-                                <div class="wishlistCompare__btn__wrap">
-                                    <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
-                                        <i class="far fa-heart"></i>
-                                        <span>В закладки</span>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
-                                        <i class="far fa-chart-bar"></i>
-                                        <span>В сравнение</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                                    
-                    <div class="product__item">
-                        <div class="product__item__hover">
-                            <div class="product__rating">
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="product__img">
-                                <a href="#">
-                                    <img src="images/dest/Product3.jpg" alt="Product3">
-                                </a>
-                            </div>
-                            <div class="product__stock">
-                                <i class="fas fa-check"></i>
-                                в наличии
-                            </div>
-                            <div class="product__title">
-                                <a href="#">
-                                    Набор для шеллака "Мощный оптима" с лампой Sun X5 Plus, UV/LED, 80W
-                                </a>
-                            </div>
-                            <div class="product__btn__wrap">
-                                <div class="product__price__block">
-                                    <div class="old__price">1137 ₽</div>
-                                    <div class="product__price">980 ₽</div>
-                                </div>
-                                <button class="addCart__btn" type="button" onclick="cart.add('43');">
-                                    <i class="fas fa-shopping-basket"></i> 
-                                    <span>В корзину</span>
-                                </button>
-                            </div>
-                            <div class="product__footer">
-
-                                <button class="fast__btn" type="button" onclick="oc_popup(2268);">
-                                    <span>Быстрый заказ</span>
-                                </button>
-
-                                <div class="wishlistCompare__btn__wrap">
-                                    <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
-                                        <i class="far fa-heart"></i>
-                                        <span>В закладки</span>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
-                                        <i class="far fa-chart-bar"></i>
-                                        <span>В сравнение</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                                                    
-                    <div class="product__item">
-                        <div class="product__item__hover">
-                            <div class="product__rating">
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="product__img">
-                                <a href="#">
-                                    <img src="images/dest/Product5.jpg" alt="Product5">
-                                </a>
-                            </div>
-                            <div class="product__stock">
-                                <i class="fas fa-check"></i>
-                                в наличии
-                            </div>
-                            <div class="product__title">
-                                <a href="#">
-                                    Гель-лак Shellac Bluesky №80501/40501 Cream Puff, 10мл.
-                                </a>
-                            </div>
-                            <div class="product__btn__wrap">
-                                <div class="product__price__block">
-                                    <div class="old__price">1137 ₽</div>
-                                    <div class="product__price">980 ₽</div>
-                                </div>
-                                <button class="addCart__btn" type="button" onclick="cart.add('43');">
-                                    <i class="fas fa-shopping-basket"></i> 
-                                    <span>В корзину</span>
-                                </button>
-                            </div>
-                            <div class="product__footer">
-
-                                <button class="fast__btn" type="button" onclick="oc_popup(2268);">
-                                    <span>Быстрый заказ</span>
-                                </button>
-
-                                <div class="wishlistCompare__btn__wrap">
-                                    <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
-                                        <i class="far fa-heart"></i>
-                                        <span>В закладки</span>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
-                                        <i class="far fa-chart-bar"></i>
-                                        <span>В сравнение</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                                                                    
-                    <div class="product__item">
-                        <div class="product__item__hover">
-                            <div class="product__rating">
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                                <span class="rating__star "><i class="fas fa-star"></i></span>
-                            </div>
-                            <div class="product__img">
-                                <a href="#">
-                                    <img src="images/dest/Product4.jpg" alt="Product4">
-                                </a>
-                            </div>
-                            <div class="product__stock">
-                                <i class="fas fa-check"></i>
-                                в наличии
-                            </div>
-                            <div class="product__title">
-                                <a href="#">
-                                    Набор для шеллака "Мощный оптима" с лампой Sun X5 Plus, UV/LED, 80W
-                                </a>
-                            </div>
-                            <div class="product__btn__wrap">
-                                <div class="product__price__block">
-                                    <div class="old__price">1137 ₽</div>
-                                    <div class="product__price">980 ₽</div>
-                                </div>
-                                <button class="addCart__btn" type="button" onclick="cart.add('43');">
-                                    <i class="fas fa-shopping-basket"></i> 
-                                    <span>В корзину</span>
-                                </button>
-                            </div>
-                            <div class="product__footer">
-
-                                <button class="fast__btn" type="button" onclick="oc_popup(2268);">
-                                    <span>Быстрый заказ</span>
-                                </button>
-
-                                <div class="wishlistCompare__btn__wrap">
-                                    <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
-                                        <i class="far fa-heart"></i>
-                                        <span>В закладки</span>
-                                    </button>
-                                    <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
-                                        <i class="far fa-chart-bar"></i>
-                                        <span>В сравнение</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- PRODUCT COLUMN END -->
-
-            <!-- PAGINATION BEGIN -->
-            <div class="pagination">
-                <ul class="pagination__list">
-                    <li class="pagination__list__item active">
-                        <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka?page=1&amp;bfilter=price:849-3599;" class="pagination__list__link">1</a>
+                <!-- BREADCRUMBS BEGIN -->
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="https://demo.opencart.com/index.php?route=common/home">
+                            <i class="fa fa-home"></i>
+                        </a>
+                        <span>
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
                     </li>
-                    <li class="pagination__list__item">
-                        <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka?page=2&amp;bfilter=price:849-3599;" class="pagination__list__link">2</a>
-                    </li>
-                    <li class="pagination__list__item">
-                        <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka?page=2&amp;bfilter=price:849-3599;" class="pagination__list__last"><i class="fas fa-angle-double-right"></i></a>
+                    <li>
+                        <a href="https://demo.opencart.com/index.php?route=product/category&amp;path=20">Наборы для гель-лака</a>
                     </li>
                 </ul>
-
-                <div class="pagination__all-product">
-                    Всего товаров -&nbsp;<strong>25</strong>
+                <!-- BREADCRUMBS END -->
+    
+                <h1 class="title">Наборы для гель-лака</h1>
+    
+                <!-- CATEGORY DESCRIPTION BEGIN -->
+                <div class="wrapper">
+                    <label for="button">Показать описание</label>
+                    <input type="checkbox" id="button">
+                        <div class="description">
+                            Мы предлагаем наборы для маникюра гель-лаком на любой вкус и по доступным ценам. При этом, в наших наборах для гель-лака мы постарались охватить максимально возможное количество сочетаний, что бы у вас был широкий выбор доступных вариантов.
+                            В каждом наборе вы найдете современные высокотехнологичные и эффективные лампы для маникюра, которые сушат ногти за считанные секунды и не теряют мощность со временем. В зависимости от комплектации набора в него могут входить разное количество гель-лаков, дизайны для ногтей (стразы, бульонки, камифубуки), вспомогательные материалы для удобства нанесения покрытия. При этом каждый набор, вне зависимости от его цены и комплектации, позволит сразу после покупки сделать красивый и качественный маникюр гель-лаком.
+                        </div>
                 </div>
-            </div>
-            <!-- PAGINATION END -->
+                <!-- CATEGORY DESCRIPTION END -->
+    
+                <!-- SORT BEGIN -->
+                <div class="sort__wrap">
+    
+                    <div class="sort">
+                        <i class="fas fa-sort-amount-down-alt"></i>
+                        <select id="input-sort" class="form-control" onchange="location = this.value;">
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.sort_order&amp;order=ASC" selected="selected">По умолчанию</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=ASC">Дешевые</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=p.price&amp;order=DESC">Дорогие</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;sort=rating&amp;order=DESC">Популярные</option>
+                        </select>
+                    </div>
+    
+                    <div class="limit">
+                        <div class="limit__title">На странице</div>
+                        <select id="input-limit" class="form-control" onchange="location = this.value;">
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=15" selected="selected">15</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=25">25</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=50">50</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=75">75</option>
+                            <option value="https://demo.opencart.com/index.php?route=product/category&amp;path=20&amp;limit=100">100</option>
+                        </select>
+                    </div>
+    
+                    <!-- <div class="card__view">
+                        <button type="button" id="list-view" class="btn btn-default active" data-toggle="tooltip" title="" data-original-title="List" aria-describedby="tooltip234056">
+                            <i class="fa fa-th-list"></i>
+                        </button>
+    
+                        <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="" data-original-title="Grid">
+                            <i class="fa fa-th"></i>
+                        </button>
+                    </div> -->
+                </div>
+                
+                <!-- SORT END -->
+    
+                <!-- PRODUCT COLUMN BEGIN -->
+                <div class="popular">
+                    <div class="products__wrapper">
+                            
+                        <div class="product__item">
+                            <div class="product__item__hover">
+                                <div class="product__rating">
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="product__img">
+                                    <a href="#">
+                                        <img src="images/dest/Product1.jpg" alt="Product1">
+                                    </a>
+                                </div>
+                                <div class="product__stock">
+                                    <i class="fas fa-check"></i>
+                                    в наличии
+                                </div>
+                                <div class="product__title">
+                                    <a href="#">
+                                        Набор для шеллака "Мощный макси"
+                                    </a>
+                                </div>
+                                <div class="product__btn__wrap">
+                                    <div class="product__price__block">
+                                        <!-- <div class="old__price">1137 ₽</div> -->
+                                        <div class="product__price">1980 ₽</div>
+                                    </div>
+                                    <button class="addCart__btn" type="button" onclick="cart.add('43');">
+                                        <i class="fas fa-shopping-basket"></i> 
+                                        <span>В корзину</span>
+                                    </button>
+                                </div>
+                                <div class="product__footer">
+    
+                                    <button class="fast__btn" type="button" onclick="oc_popup(2268);">
+                                        <span>Быстрый заказ</span>
+                                    </button>
+    
+                                    <div class="wishlistCompare__btn__wrap">
+                                        <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
+                                            <i class="far fa-heart"></i>
+                                            <span>В закладки</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
+                                            <i class="far fa-chart-bar"></i>
+                                            <span>В сравнение</span>
+                                        </button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                                        
+                        <div class="product__item">
+                            <div class="product__item__hover">
+                                <div class="product__rating">
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="product__img">
+                                    <a href="#">
+                                        <img src="images/dest/Product2.jpg" alt="Product2">
+                                    </a>
+                                </div>
+                                <div class="product__stock">
+                                    <i class="fas fa-check"></i>
+                                    в наличии
+                                </div>
+                                <div class="product__title">
+                                    <a href="#">
+                                        Набор для шеллака "Мощный оптима" с лампой Sun X5 Plus, UV/LED, 80W
+                                    </a>
+                                </div>
+                                <div class="product__btn__wrap">
+                                    <div class="product__price__block">
+                                        <div class="old__price">1137 ₽</div>
+                                        <div class="product__price">980 ₽</div>
+                                    </div>
+                                    <button class="addCart__btn" type="button" onclick="cart.add('43');">
+                                        <i class="fas fa-shopping-basket"></i> 
+                                        <span>В корзину</span>
+                                    </button>
+                                </div>
+                                <div class="product__footer">
+    
+                                    <button class="fast__btn" type="button" onclick="oc_popup(2268);">
+                                        <span>Быстрый заказ</span>
+                                    </button>
+    
+                                    <div class="wishlistCompare__btn__wrap">
+                                        <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
+                                            <i class="far fa-heart"></i>
+                                            <span>В закладки</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
+                                            <i class="far fa-chart-bar"></i>
+                                            <span>В сравнение</span>
+                                        </button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                                        
+                        <div class="product__item">
+                            <div class="product__item__hover">
+                                <div class="product__rating">
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="product__img">
+                                    <a href="#">
+                                        <img src="images/dest/Product3.jpg" alt="Product3">
+                                    </a>
+                                </div>
+                                <div class="product__stock">
+                                    <i class="fas fa-check"></i>
+                                    в наличии
+                                </div>
+                                <div class="product__title">
+                                    <a href="#">
+                                        Набор для шеллака "Мощный оптима" с лампой Sun X5 Plus, UV/LED, 80W
+                                    </a>
+                                </div>
+                                <div class="product__btn__wrap">
+                                    <div class="product__price__block">
+                                        <div class="old__price">1137 ₽</div>
+                                        <div class="product__price">980 ₽</div>
+                                    </div>
+                                    <button class="addCart__btn" type="button" onclick="cart.add('43');">
+                                        <i class="fas fa-shopping-basket"></i> 
+                                        <span>В корзину</span>
+                                    </button>
+                                </div>
+                                <div class="product__footer">
+    
+                                    <button class="fast__btn" type="button" onclick="oc_popup(2268);">
+                                        <span>Быстрый заказ</span>
+                                    </button>
+    
+                                    <div class="wishlistCompare__btn__wrap">
+                                        <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
+                                            <i class="far fa-heart"></i>
+                                            <span>В закладки</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
+                                            <i class="far fa-chart-bar"></i>
+                                            <span>В сравнение</span>
+                                        </button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                                                        
+                        <div class="product__item">
+                            <div class="product__item__hover">
+                                <div class="product__rating">
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="product__img">
+                                    <a href="#">
+                                        <img src="images/dest/Product5.jpg" alt="Product5">
+                                    </a>
+                                </div>
+                                <div class="product__stock">
+                                    <i class="fas fa-check"></i>
+                                    в наличии
+                                </div>
+                                <div class="product__title">
+                                    <a href="#">
+                                        Гель-лак Shellac Bluesky №80501/40501 Cream Puff, 10мл.
+                                    </a>
+                                </div>
+                                <div class="product__btn__wrap">
+                                    <div class="product__price__block">
+                                        <div class="old__price">1137 ₽</div>
+                                        <div class="product__price">980 ₽</div>
+                                    </div>
+                                    <button class="addCart__btn" type="button" onclick="cart.add('43');">
+                                        <i class="fas fa-shopping-basket"></i> 
+                                        <span>В корзину</span>
+                                    </button>
+                                </div>
+                                <div class="product__footer">
+    
+                                    <button class="fast__btn" type="button" onclick="oc_popup(2268);">
+                                        <span>Быстрый заказ</span>
+                                    </button>
+    
+                                    <div class="wishlistCompare__btn__wrap">
+                                        <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
+                                            <i class="far fa-heart"></i>
+                                            <span>В закладки</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
+                                            <i class="far fa-chart-bar"></i>
+                                            <span>В сравнение</span>
+                                        </button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                                                                        
+                        <div class="product__item">
+                            <div class="product__item__hover">
+                                <div class="product__rating">
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                    <span class="rating__star "><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="product__img">
+                                    <a href="#">
+                                        <img src="images/dest/Product4.jpg" alt="Product4">
+                                    </a>
+                                </div>
+                                <div class="product__stock">
+                                    <i class="fas fa-check"></i>
+                                    в наличии
+                                </div>
+                                <div class="product__title">
+                                    <a href="#">
+                                        Набор для шеллака "Мощный оптима" с лампой Sun X5 Plus, UV/LED, 80W
+                                    </a>
+                                </div>
+                                <div class="product__btn__wrap">
+                                    <div class="product__price__block">
+                                        <div class="old__price">1137 ₽</div>
+                                        <div class="product__price">980 ₽</div>
+                                    </div>
+                                    <button class="addCart__btn" type="button" onclick="cart.add('43');">
+                                        <i class="fas fa-shopping-basket"></i> 
+                                        <span>В корзину</span>
+                                    </button>
+                                </div>
+                                <div class="product__footer">
+    
+                                    <button class="fast__btn" type="button" onclick="oc_popup(2268);">
+                                        <span>Быстрый заказ</span>
+                                    </button>
+    
+                                    <div class="wishlistCompare__btn__wrap">
+                                        <button type="button" data-toggle="tooltip" title="" onclick="wishlist.add('43');" data-original-title="Add to Wish List">
+                                            <i class="far fa-heart"></i>
+                                            <span>В закладки</span>
+                                        </button>
+                                        <button type="button" data-toggle="tooltip" title="" onclick="compare.add('43');" data-original-title="Compare this Product">
+                                            <i class="far fa-chart-bar"></i>
+                                            <span>В сравнение</span>
+                                        </button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT COLUMN END -->
+    
+                <!-- PAGINATION BEGIN -->
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__list__item active">
+                            <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka?page=1&amp;bfilter=price:849-3599;" class="pagination__list__link">1</a>
+                        </li>
+                        <li class="pagination__list__item">
+                            <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka?page=2&amp;bfilter=price:849-3599;" class="pagination__list__link">2</a>
+                        </li>
+                        <li class="pagination__list__item">
+                            <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka?page=2&amp;bfilter=price:849-3599;" class="pagination__list__last"><i class="fas fa-angle-double-right"></i></a>
+                        </li>
+                    </ul>
+    
+                    <div class="pagination__all-product">
+                        Всего товаров -&nbsp;<strong>25</strong>
+                    </div>
+                </div>
+                <!-- PAGINATION END -->
+    
+                <!-- SEO BLOCK BEGIN -->
+                <section class="seo-text">
+                    <h2 class="keyw">Что мы предлагаем:</h2>
+                    <div class="keyw__item">
+                        <span>Наборы для шеллака</span>
+                        <span>наборы для гель-лака</span>
+                        <span>стартовые наборы</span>
+                        <span>наборы для маникюра с лампой</span>
+                        <span>купить недорого в СПб</span>
+                    </div>
+                </section>
+                <!-- SEO BLOCK END -->
+    
+            </main>
+    
+            <aside class="aside" id="aside">
+                <ul class="main-menu">
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/nabori-dlya-shellaca-gel-laka" class="main-menu__link">
+                            <span>Наборы для гель-лака</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item m-dropdown">
+                        <a href="https://topnailshop.ru/gel-lak" class="main-menu__link">
+                            <span>Гель-лаки</span>
+                            <span class="main-menu__right-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </a>
+    
+                            <ul class="m-dropdown-menu ">
+                                <li class="m-dropdown-menu__item">
+                                    <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="m-dropdown-menu__link">
+                                        <span>Гель-лак BLUESKY</span>
+                                    </a>
+                                </li>
+    
+                                <li class="m-dropdown-menu__item">
+                                    <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="m-dropdown-menu__link">
+                                        <span>Гель-лак KODI</span>
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/bazy-topy-prajmery" class="main-menu__link">
+                            <span>Базы, топы, праймеры</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/lampi-dlya-nogtey" class="main-menu__link">
+                            <span>Лампы для маникюра</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/pilki-bafi" class="main-menu__link">
+                            <span>Пилки и Бафы</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item m-dropdown">
+                        <a href="https://topnailshop.ru/neil-art" class="main-menu__link">
+                            <span>Nail-Art</span>
+                            <span class="main-menu__right-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+    
+                            <ul class="m-dropdown-menu ">
+                                <li class="m-dropdown-menu__item">
+                                    <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="m-dropdown-menu__link">
+                                        <span>Стразы</span>
+                                    </a>
+                                </li>
+    
+                                <li class="m-dropdown-menu__item">
+                                    <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="m-dropdown-menu__link">
+                                        <span>Камифубуки</span>
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+    
+                    <li class="main-menu__item m-dropdown">
+                        <a href="https://topnailshop.ru/jidkosti" class="main-menu__link">
+                            <span>Жидкости</span>
+                            <span class="main-menu__right-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+    
+                            <ul class="m-dropdown-menu ">
+                                <li class="m-dropdown-menu__item">
+                                    <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="m-dropdown-menu__link">
+                                        <span>Жидкости для снятия</span>
+                                    </a>
+                                </li>
+    
+                                <li class="m-dropdown-menu__item">
+                                    <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="m-dropdown-menu__link">
+                                        <span>Жидкости для снятия</span>
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/soputstvuyuhie-tovari" class="main-menu__link">
+                            <span>Сопутствующие товары</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/instrumentyi-dlya-manikyura" class="main-menu__link">
+                            <span>Инструменты для маникюра</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/kisti-i-dotsi" class="main-menu__link">
+                            <span>Кисти и дотсы</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/uhod-za-kutikuloy" class="main-menu__link">
+                            <span>Уход за кутикулой</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/apparati-frezi-pilesosi" class="main-menu__link">
+                            <span>Аппараты, фрезы, пылесосы</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item">
+                        <a href="https://topnailshop.ru/akrilovaya-systema" class="main-menu__link">
+                            <span>Акриловая система</span>
+                        </a>
+                    </li>
+    
+                    <li class="main-menu__item ">
+                        <a href="/katalog" class="main-menu__link ">
+                            <i class="fas fa-bars"></i> 
+                            <span>Весь каталог</span>
+                        </a>
+                    </li>
+    
+                </ul>
+            </aside>
+    
         </div>
 
     </div>
 
-@@include('./include-parts/footer.html')
-    
+    @@include('./include-parts/footer.html')
+
 
 	<script src="js/app.min.js"></script>
 

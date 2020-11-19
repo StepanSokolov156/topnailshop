@@ -8,10 +8,12 @@
 @import parts/wide_banner
 @import parts/article
 @import parts/footer
+@import parts/catalog_main
 @import parts/catalog_breadcrumbs
 @import parts/catalog_description
 @import parts/catalog_sort
 @import parts/catalog_pagination
+@import parts/catalog_seo
 
 
   
@@ -71,3 +73,22 @@
 @include media-breakpoint-down(xs) 
   .container
     max-width: 100%
+
+
+
+
+@include media-breakpoint-down(lg)
+  .container-wide
+    max-width: 960px
+
+@include media-breakpoint-down(md)
+  .container-wide
+    max-width: 720px
+
+@include media-breakpoint-down(sm) 
+  .container-wide
+    max-width: 540px
+
+@include media-breakpoint-down(xs) 
+  .container-wide
+    max-width: 100%    
