@@ -14,4 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		mouseDrag: true
 	});
 
+	$('#my-menu').mmenu({
+		"extensions": [
+			"pagedim-black"
+	 ],
+	 "navbar": {
+		 "title": 'Меню'
+		}
+	});
+
 });

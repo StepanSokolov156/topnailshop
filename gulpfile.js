@@ -13,7 +13,8 @@ let paths = {
 			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
 			'node_modules/remodal/dist/remodal.min.js', // popup
 			'node_modules/tiny-slider/dist/tiny-slider.js', // tiny slider
-			'node_modules/@fortawesome/fontawesome-free/js/all.min.js', // tiny slider
+			'node_modules/@fortawesome/fontawesome-free/js/all.min.js', // fontawesome
+			'node_modules/mmenu-js/dist/mmenu.js', // mmenu
 			'app/libs/mail/mail.js', // js mail handler
 			baseDir + '/js/app.js' // app.js. Always at the end
 		],

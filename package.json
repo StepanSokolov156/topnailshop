@@ -26,6 +26,7 @@
 		"gulp-stylus": "^2.7.0",
 		"gulp-uglify-es": "^2.0.0",
 		"jquery": "^3.5.1",
+		"mmenu-js": "^8.5.20",
 		"remodal": "^1.1.1",
 		"tiny-slider": "^2.9.3"
 	}

@@ -14,8 +14,35 @@
 </head>
 
 <body>
-
+	<div id="my-page">
 	<header class="header">
+
+		<nav id="my-menu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/work">Our work</a></li>
+				<li><span>About us</span>
+					<ul>
+						<li><a href="/about/history">History</a></li>
+						<li><span>The team</span>
+							<ul>
+								<li><a href="/about/team/management">Management</a></li>
+								<li><a href="/about/team/sales">Sales</a></li>
+								<li><a href="/about/team/development">Development</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><span>Services</span>
+					<ul>
+						<li><a href="/services/design">Design</a></li>
+						<li><a href="/services/development">Development</a></li>
+						<li><a href="/services/marketing">Marketing</a></li>
+					</ul>
+				</li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</nav>
 
 		<div class="header__top">
 			<div class="container-wide">
@@ -89,7 +116,7 @@
 				<div class="navbar">
 					<div class="navbar__menu-btn">
 						<i class="fas fa-bars"></i>
-						<button class="navbar__btn">Меню</button>
+						<a href="#my-menu" class="navbar__btn">Меню</a>
 					</div>
 					<div class="search hide-md js-search">
 						<div class="search__form">
@@ -615,6 +642,7 @@
 			<p class="copyright">© 2016–2020 TopNailShop.ru</p>
 		</div>
 	</footer>
+</div>
 
 	<script src="js/app.min.js"></script>
 
