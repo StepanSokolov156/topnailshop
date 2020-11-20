@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		mouseDrag: true
 	});
 
+	$('#my-menu').css("display","block")
 	$('#my-menu').mmenu({
 		"extensions": [
 			"pagedim-black"
