@@ -1,0 +1,42 @@
+@media screen and ( min-width: 960px )
+
+    .aside
+        .main-menu
+            padding: 0
+            list-style: none
+            background: #f8f8f7
+            border: 1px solid #ececec
+            &__item
+                display: block
+                border-bottom: 1px solid #ececec
+                margin: 0
+                &:hover
+                    background: #fff
+                    .main-menu__link
+                        border-left: 3px solid $accent
+                    .main-menu__right-arrow
+                        color: $accent 
+
+            a
+                text-decoration: none
+                outline: none
+                transition: all 0.2s linear
+            &__link
+                display: flex
+                align-items: center
+                padding: 15px 33px 15px 20px
+                min-height: 49px
+                border-left: 3px solid transparent
+                color: #252525
+                .fa-bars 
+                    color: $accent
+                    margin-right: 10px
+
+            .m-dropdown
+                position: relative
+                .main-menu__right-arrow
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: 18px
+                    font-size: 10px
