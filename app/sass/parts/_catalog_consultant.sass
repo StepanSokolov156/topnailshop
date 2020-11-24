@@ -1,46 +1,47 @@
-.consultation
-    border-radius: 20px
-    box-shadow: 0 0 10px rgba(0,0,0,.15)
-    background: #fafafa
-    margin: 20px 0
-    &__header
-        padding: 10px
-        display: flex
-        justify-content: space-around
-        align-items: center
-        background: $accent
-        border-radius: 20px 20px 0 0
-        img
-            width: 55px
-            height: 55px
-            border-radius: 50%
-        &__title
+@media screen and ( min-width: 960px )
+    .consultation
+        border-radius: 20px
+        box-shadow: 0 0 10px rgba(0,0,0,.15)
+        background: #fafafa
+        margin: 20px 0
+        &__header
+            padding: 10px
+            display: flex
+            justify-content: space-around
+            align-items: center
+            background: $accent
+            border-radius: 20px 20px 0 0
+            img
+                width: 55px
+                height: 55px
+                border-radius: 50%
+            &__title
+                color: #FFFFFF
+                span
+                    font-weight: 700
+
+    .consultation__body
+        padding: 30px 20px
+        &__msg
+            padding: 5px
+            background: #FFFFFF
+            margin-bottom: 20px
+            border-radius: 4px
+        &__btn
+            display: block
+            margin: 0 auto
+            margin-top: 25px
+            padding: 9px 30px
+            border: none
+            border-radius: 5px
+            background: $accent
             color: #FFFFFF
-            span
-                font-weight: 700
+            box-shadow: 0 3px 5px rgba(0,0,0,.15)
+            .fa-pencil-alt
+                margin-left: 10px
 
-.consultation__body
-    padding: 30px 20px
-    &__msg
-        padding: 5px
-        background: #FFFFFF
-        margin-bottom: 20px
-        border-radius: 4px
-    &__btn
-        display: block
-        margin: 0 auto
-        margin-top: 25px
-        padding: 9px 30px
-        border: none
-        border-radius: 5px
+    .consultation__footer
+        height: 25px
         background: $accent
-        color: #FFFFFF
-        box-shadow: 0 3px 5px rgba(0,0,0,.15)
-        .fa-pencil-alt
-            margin-left: 10px
-
-.consultation__footer
-    height: 25px
-    background: $accent
-    border-radius: 0 0 20px 20px
-        
+        border-radius: 0 0 20px 20px
+            
