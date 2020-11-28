@@ -1,3 +1,37 @@
+.product__headlist
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin: 20px 0
+	.product__rating
+		display: inline-flex
+		vertical-align: middle
+		float: right
+		.rating__star
+			font-size: 10px
+			color: #d5dee3
+	.product__article
+		display: inline-block
+		margin-left: 15px
+		font-size: 10px
+		color: #d5dee3
+		// float: right
+	button
+		display: inline-flex
+		border: none
+		font-size: 14px
+		background-color: #fcfcfc
+		.fa-heart, .fa-chart-bar
+			margin: 0 10px
+			color: $accent
+		span
+			display: none
+			color: #7b7b7b
+			font-size: 11px
+			text-decoration: underline
+	.wishlist__button
+		margin-left: auto
+
 .tns-controls
 	text-align: center
 	margin-bottom: 10px
@@ -32,3 +66,10 @@
 .tns-nav-active
 	border: 1px solid $accent
 	filter: opacity(100%)
+
+
+@media screen and ( min-width: 575px )
+	.product__headlist
+		button
+			span
+				display: block
